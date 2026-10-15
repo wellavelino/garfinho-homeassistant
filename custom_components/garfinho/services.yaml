@@ -1,0 +1,45 @@
+search:
+  fields:
+    text:
+      example: bolo de cenoura
+      selector:
+        text:
+    tags:
+      example: '["Sem glúten", "Fácil"]'
+      selector:
+        object:
+    exclude_tags:
+      selector:
+        object:
+    ingredients:
+      example: '["banana"]'
+      selector:
+        object:
+    exclude_ingredients:
+      example: '["ovo"]'
+      selector:
+        object:
+    sort:
+      default: relevance
+      selector:
+        select:
+          options: [relevance, newest, title, random]
+    limit:
+      default: 10
+      selector:
+        number:
+          min: 1
+          max: 100
+add_favorite:
+  fields:
+    recipe_id:
+      required: true
+      selector:
+        text:
+remove_favorite:
+  fields:
+    recipe_id:
+      required: true
+      selector:
+        text:
+refresh: {}

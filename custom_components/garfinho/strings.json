@@ -1,0 +1,85 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Sign in to Garfinho",
+        "description": "1. Open [the sign-in page]({url}) and sign in with your Garfinho account.\n2. Come back here and press **Submit**."
+      }
+    },
+    "error": {
+      "login_not_completed": "Sign-in was not completed yet. Finish it in the browser, then press Submit again.",
+      "cannot_connect": "Could not reach Garfinho."
+    },
+    "abort": {
+      "already_configured": "This account is already configured.",
+      "cannot_connect": "Could not reach Garfinho."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "favorites": {
+        "name": "Favorite recipes"
+      }
+    }
+  },
+  "services": {
+    "search": {
+      "name": "Search recipes",
+      "description": "Searches the recipe catalog. Returns the matches as response data.",
+      "fields": {
+        "text": {
+          "name": "Text",
+          "description": "Words to look for in titles and ingredients."
+        },
+        "tags": {
+          "name": "Tags",
+          "description": "Tags every result must have (name or id)."
+        },
+        "exclude_tags": {
+          "name": "Exclude tags",
+          "description": "Tags results must not have."
+        },
+        "ingredients": {
+          "name": "Ingredients",
+          "description": "Ingredients every result must contain."
+        },
+        "exclude_ingredients": {
+          "name": "Exclude ingredients",
+          "description": "Ingredients results must not contain."
+        },
+        "sort": {
+          "name": "Sort",
+          "description": "How to order the results."
+        },
+        "limit": {
+          "name": "Limit",
+          "description": "Maximum number of results."
+        }
+      }
+    },
+    "add_favorite": {
+      "name": "Add favorite",
+      "description": "Adds a recipe to your favorites.",
+      "fields": {
+        "recipe_id": {
+          "name": "Recipe ID",
+          "description": "Id returned by the search service."
+        }
+      }
+    },
+    "remove_favorite": {
+      "name": "Remove favorite",
+      "description": "Removes a recipe from your favorites and from all your folders.",
+      "fields": {
+        "recipe_id": {
+          "name": "Recipe ID",
+          "description": "Id returned by the search service."
+        }
+      }
+    },
+    "refresh": {
+      "name": "Refresh recipes",
+      "description": "Download the latest recipes and instructions now. This also happens every day."
+    }
+  }
+}
